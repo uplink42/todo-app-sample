@@ -1,0 +1,18 @@
+<form #form="ngForm" class="row">
+  <div class="col-9">
+    <mat-form-field>
+      <mat-label>Insert new Todo</mat-label>
+      <input type="text" matInput [(ngModel)]="todo" name="todo" />
+    </mat-form-field>
+  </div>
+  <div class="col-3">
+    <button
+      (click)="createTodo()"
+      [disabled]="!todo"
+      mat-raised-button
+      color="primary"
+    >
+      Add Todo
+    </button>
+  </div>
+</form>

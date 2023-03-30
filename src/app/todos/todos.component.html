@@ -1,0 +1,29 @@
+<form #form="ngForm">
+  <table class="table table-striped table-hover">
+    <thead>
+      <th style="width: 50px"></th>
+      <th></th>
+      <th></th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>
+          <mat-checkbox
+            [ngModel]="todo.status === 'DONE'"
+            (change)="toggleStatus.emit(todo)"
+            name="checkbox-{{ todo.id }}"
+          ></mat-checkbox>
+        </td>
+        <td class="description" [class.done]="todo.status === 'DONE'">
+          {{ todo.description }}
+        </td>
+        <td style="width: 100px">
+          <button mat-raised-button color="warn" (click)="confirmDelete(todo)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>

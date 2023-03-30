@@ -1,0 +1,6 @@
+<h2>Logger:</h2>
+<ul>
+  <li *ngFor="let event of history">
+    <span>{{ event.timestamp | date }} - {{ event.event }}</span>
+  </li>
+</ul>
