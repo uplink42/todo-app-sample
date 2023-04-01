@@ -1,0 +1,19 @@
+cdk-overlay-container {
+  &.mdc-snackbar .snackbar-remove-todo {
+    background-color: red;
+    border: 5px solid purple;
+  }
+}
+
+.mdc-snackbar {
+  color: blue !important;
+}
+
+.snackbar-remove-todo {
+  color: greenyellow !important;
+}
+
+.mat-mdc-snack-bar-handset {
+  background-color: red;
+  border: 5px solid purple;
+}
