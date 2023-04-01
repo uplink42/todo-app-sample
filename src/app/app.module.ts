@@ -15,6 +15,7 @@ import { MatTableModule } from "@angular/material/table";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatDialogModule } from "@angular/material/dialog";
 import { DialogComponent } from './shared/dialog/dialog.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DialogComponent } from './shared/dialog/dialog.component';
     MatButtonModule,
     MatTableModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
