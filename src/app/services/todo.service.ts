@@ -21,13 +21,8 @@ export class TodoService {
 
   remove(todo: Todo) {
     let todos = [...this.todos.value];
-    const todoIndex = todos.findIndex((t) => t.id === todo.id);
 
-    const todosWithDeletedTodo = todos.filter((item) => {
-      return item.id !== todos[todoIndex].id;
-    });
-
-    this.todos.next([...todosWithDeletedTodo]);
+    this.todos.next([...todos.filter(item => item.id !== todo.id)]);
     this.updateTodosInStorage();
 
     this.createHistoryEvent(

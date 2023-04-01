@@ -8,23 +8,3 @@ mat-form-field {
   width: 100%;
 }
 
-
-app-todos {
-  &.mdc-snackbar {
-    background-color: red;
-    border: 5px solid purple;
-  }
-}
-
-.mdc-snackbar {
-  color: blue !important;
-}
-
-.snackbar-remove-todo {
-  color: greenyellow !important;
-}
-
-
-mat-snack-bar-container {
-  color: orange !important;
-}
